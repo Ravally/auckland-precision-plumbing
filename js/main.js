@@ -5,6 +5,9 @@
 
 'use strict';
 
+/* Enable JS-dependent styles (progressive enhancement) */
+document.documentElement.classList.add('js');
+
 /* ----------------------------------------------------------------
    Scroll fade-in animations via IntersectionObserver
 ---------------------------------------------------------------- */

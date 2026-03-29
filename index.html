@@ -16,8 +16,6 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
   <!-- Fonts: Cormorant Garamond (display) + DM Sans (body) per design.json -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,41 +54,33 @@
   <!-- ============================================================
        NAVIGATION — design.json: deep navy fixed header
   ============================================================ -->
-  <header class="site-nav" id="site-nav" role="banner">
-    <div class="nav-inner">
-      <a href="/auckland-precision-plumbing/" class="nav-logo" aria-label="Auckland Precision Plumbing — home">
-        Auckland Precision Plumbing
+  <header class="site-header" id="site-nav" role="banner">
+    <div class="header__inner container">
+      <a href="/auckland-precision-plumbing/" class="header__logo" aria-label="Auckland Precision Plumbing — home">
+        <span class="logo__mark" aria-hidden="true">APP</span>
+        <span class="logo__text">Auckland Precision Plumbing</span>
       </a>
 
-      <!-- Desktop nav -->
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#social-proof">Testimonials</a>
-        <a href="#cta" class="nav-cta">Get a Quote</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#social-proof" class="nav__link">Testimonials</a></li>
+          <li><a href="#cta" class="btn btn--ghost nav__cta">Get a Quote</a></li>
+        </ul>
       </nav>
 
-      <!-- Mobile toggle -->
       <button
-        class="nav-toggle"
+        class="nav__toggle"
         id="nav-toggle"
         aria-label="Open navigation menu"
         aria-expanded="false"
-        aria-controls="nav-mobile"
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
       </button>
     </div>
-
-    <!-- Mobile nav -->
-    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation" hidden>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#social-proof">Testimonials</a>
-      <a href="#cta">Get a Quote</a>
-    </nav>
   </header>
 
   <main id="main-content">
@@ -103,63 +93,67 @@
     ============================================================ -->
     <section id="hero" class="hero" aria-label="Auckland Precision Plumbing">
 
-      <!-- Full-bleed background photography (premium bathroom/kitchen renovation) -->
+      <!-- Full-bleed background gradient -->
       <div
-        class="hero-bg"
-        id="hero-bg"
+        class="hero__bg"
         role="img"
         aria-label="Premium bathroom renovation completed by Auckland Precision Plumbing"
       ></div>
 
-      <!-- Gradient overlay — deep navy from bottom -->
-      <div class="hero-overlay" aria-hidden="true"></div>
-
-      <div class="container hero-content">
-        <div class="hero-inner">
-
-          <!-- Left: eyebrow + headline + subheading -->
-          <div class="hero-text">
-
-            <div class="hero-eyebrow" id="hero-eyebrow">
-              <span class="hero-eyebrow-line" aria-hidden="true"></span>
-              <span class="hero-eyebrow-text">Auckland, New Zealand</span>
-            </div>
-
-            <h1 class="hero-headline" id="hero-headline">
-              Same-day plumbing.<br>
-              Fixed price.<br>
-              10-year guarantee.
-            </h1>
-
-            <p class="hero-sub" id="hero-sub">
-              Auckland Precision Plumbing serves every Auckland suburb with emergency callouts,
-              bathroom renovations, and hot water systems. We arrive the same day, quote upfront,
-              and stand behind every job with a 10-year workmanship guarantee.
-            </p>
-
-          </div>
-
-          <!-- Right: CTA buttons (bottom-aligned with headline) -->
-          <div class="hero-actions-col">
-            <div class="hero-actions" id="hero-actions">
-              <a href="#cta" class="btn btn-primary">
-                Get Your Fixed-Price Quote
-              </a>
-              <a href="tel:+6409XXXXXX" class="btn btn-secondary btn-secondary--light">
-                Call Now: (09) XXX XXXX
-              </a>
-            </div>
-          </div>
-
-        </div>
+      <!-- Decorative engineering illustration — desktop only, aria-hidden -->
+      <div class="hero__deco" aria-hidden="true">
+        <svg viewBox="0 0 560 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="340" cy="240" r="220" stroke="rgba(232,168,68,0.07)" stroke-width="1"/>
+          <circle cx="340" cy="240" r="175" stroke="rgba(232,168,68,0.09)" stroke-width="1"/>
+          <circle cx="340" cy="240" r="130" stroke="rgba(232,168,68,0.07)" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <circle cx="340" cy="240" r="72"  stroke="rgba(232,168,68,0.18)" stroke-width="2"/>
+          <circle cx="340" cy="240" r="50"  fill="rgba(232,168,68,0.05)" stroke="rgba(232,168,68,0.25)" stroke-width="1.5"/>
+          <text x="340" y="247" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="rgba(232,168,68,0.55)" letter-spacing="1.5">APP</text>
+          <line x1="120" y1="240" x2="268" y2="240" stroke="rgba(232,168,68,0.12)" stroke-width="1.5"/>
+          <line x1="412" y1="240" x2="540" y2="240" stroke="rgba(232,168,68,0.12)" stroke-width="1.5"/>
+          <line x1="340" y1="20"  x2="340" y2="168" stroke="rgba(232,168,68,0.12)" stroke-width="1.5"/>
+          <line x1="340" y1="312" x2="340" y2="480" stroke="rgba(232,168,68,0.12)" stroke-width="1.5"/>
+          <circle cx="120" cy="240" r="14" stroke="rgba(232,168,68,0.3)" stroke-width="1.5" fill="rgba(232,168,68,0.06)"/>
+          <circle cx="540" cy="240" r="14" stroke="rgba(232,168,68,0.3)" stroke-width="1.5" fill="rgba(232,168,68,0.06)"/>
+          <circle cx="340" cy="20"  r="14" stroke="rgba(232,168,68,0.3)" stroke-width="1.5" fill="rgba(232,168,68,0.06)"/>
+          <circle cx="340" cy="480" r="14" stroke="rgba(232,168,68,0.3)" stroke-width="1.5" fill="rgba(232,168,68,0.06)"/>
+          <line x1="184" y1="96"  x2="296" y2="192" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+          <line x1="496" y1="96"  x2="389" y2="192" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+          <line x1="184" y1="384" x2="296" y2="288" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+          <line x1="496" y1="384" x2="389" y2="288" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+          <circle cx="184" cy="96"  r="9" stroke="rgba(232,168,68,0.2)" stroke-width="1.5" fill="rgba(232,168,68,0.04)"/>
+          <circle cx="496" cy="96"  r="9" stroke="rgba(232,168,68,0.2)" stroke-width="1.5" fill="rgba(232,168,68,0.04)"/>
+          <circle cx="184" cy="384" r="9" stroke="rgba(232,168,68,0.2)" stroke-width="1.5" fill="rgba(232,168,68,0.04)"/>
+          <circle cx="496" cy="384" r="9" stroke="rgba(232,168,68,0.2)" stroke-width="1.5" fill="rgba(232,168,68,0.04)"/>
+          <circle cx="340" cy="240" r="6" fill="rgba(232,168,68,0.7)"/>
+        </svg>
       </div>
 
-      <!-- Subtle scroll indicator -->
-      <div class="hero-scroll-hint" id="hero-scroll-hint" aria-hidden="true">
-        <span>Scroll</span>
-        <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
-          <path d="M8 1v14M2 9l6 6 6-6" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <div class="container hero__content">
+
+        <span class="hero__eyebrow">Auckland, New Zealand</span>
+
+        <h1 class="hero__heading">
+          Same-day plumbing.<br>
+          Fixed price.<br>
+          10-year guarantee.
+        </h1>
+
+        <p class="hero__subhead">
+          Auckland Precision Plumbing serves every Auckland suburb with emergency callouts,
+          bathroom renovations, and hot water systems. We arrive the same day, quote upfront,
+          and stand behind every job with a 10-year workmanship guarantee.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#cta" class="btn btn--primary" data-event="cta_click" data-label="hero-primary">
+            Get Your Fixed-Price Quote
+          </a>
+          <a href="tel:+6495550123" class="btn btn--ghost" data-event="phone_click">
+            Call Now: (09) 555 0123
+          </a>
+        </div>
+
       </div>
 
     </section>
@@ -223,6 +217,41 @@
         <div class="services__grid">
 
           <article class="service-card">
+            <!-- Visual header: Emergency Plumbing — burst pipe + water drops -->
+            <div class="service-card__visual" aria-hidden="true">
+              <svg viewBox="0 0 320 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background grid -->
+                <rect width="320" height="148" fill="#0B1120"/>
+                <line x1="0" y1="37"  x2="320" y2="37"  stroke="rgba(232,168,68,0.05)" stroke-width="1"/>
+                <line x1="0" y1="74"  x2="320" y2="74"  stroke="rgba(232,168,68,0.05)" stroke-width="1"/>
+                <line x1="0" y1="111" x2="320" y2="111" stroke="rgba(232,168,68,0.05)" stroke-width="1"/>
+                <line x1="80"  y1="0" x2="80"  y2="148" stroke="rgba(232,168,68,0.05)" stroke-width="1"/>
+                <line x1="160" y1="0" x2="160" y2="148" stroke="rgba(232,168,68,0.05)" stroke-width="1"/>
+                <line x1="240" y1="0" x2="240" y2="148" stroke="rgba(232,168,68,0.05)" stroke-width="1"/>
+                <!-- Horizontal main pipe -->
+                <rect x="40" y="62" width="240" height="22" rx="11" fill="rgba(232,168,68,0.08)" stroke="rgba(232,168,68,0.35)" stroke-width="1.5"/>
+                <!-- Burst point highlight -->
+                <circle cx="160" cy="73" r="16" fill="rgba(232,168,68,0.1)" stroke="rgba(232,168,68,0.5)" stroke-width="1.5"/>
+                <!-- Water spray lines -->
+                <line x1="160" y1="57" x2="145" y2="28" stroke="rgba(100,180,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="160" y1="57" x2="160" y2="22" stroke="rgba(100,180,255,0.6)" stroke-width="2"   stroke-linecap="round"/>
+                <line x1="160" y1="57" x2="175" y2="28" stroke="rgba(100,180,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="160" y1="57" x2="132" y2="36" stroke="rgba(100,180,255,0.3)" stroke-width="1"   stroke-linecap="round"/>
+                <line x1="160" y1="57" x2="188" y2="36" stroke="rgba(100,180,255,0.3)" stroke-width="1"   stroke-linecap="round"/>
+                <!-- Water drops -->
+                <ellipse cx="145" cy="24" rx="3" ry="4.5" fill="rgba(100,180,255,0.55)"/>
+                <ellipse cx="160" cy="16" rx="3.5" ry="5" fill="rgba(100,180,255,0.65)"/>
+                <ellipse cx="175" cy="24" rx="3" ry="4.5" fill="rgba(100,180,255,0.55)"/>
+                <!-- Same-day clock indicator -->
+                <circle cx="270" cy="40" r="22" fill="rgba(232,168,68,0.07)" stroke="rgba(232,168,68,0.3)" stroke-width="1.5"/>
+                <line x1="270" y1="26" x2="270" y2="40" stroke="rgba(232,168,68,0.8)" stroke-width="2" stroke-linecap="round"/>
+                <line x1="270" y1="40" x2="280" y2="46" stroke="rgba(232,168,68,0.8)" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="270" cy="40" r="2.5" fill="rgba(232,168,68,0.9)"/>
+                <!-- Alert label -->
+                <rect x="42" y="102" width="96" height="22" rx="4" fill="rgba(232,168,68,0.12)" stroke="rgba(232,168,68,0.3)" stroke-width="1"/>
+                <text x="90" y="117" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="rgba(232,168,68,0.85)" letter-spacing="1">SAME-DAY RESPONSE</text>
+              </svg>
+            </div>
             <div class="service-card__icon" aria-hidden="true">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 2a10 10 0 110 20A10 10 0 0112 2z"/><path d="M12 6v6l4 2"/>
@@ -240,6 +269,42 @@
           </article>
 
           <article class="service-card service-card--featured">
+            <!-- Visual header: Bathroom Renovation — floor plan grid layout -->
+            <div class="service-card__visual" aria-hidden="true">
+              <svg viewBox="0 0 320 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="148" fill="#0e1930"/>
+                <!-- Amber glow -->
+                <radialGradient id="rg-reno" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%"   stop-color="rgba(232,168,68,0.15)"/>
+                  <stop offset="100%" stop-color="rgba(232,168,68,0)"/>
+                </radialGradient>
+                <rect width="320" height="148" fill="url(#rg-reno)"/>
+                <!-- Room outline -->
+                <rect x="60" y="20" width="200" height="108" rx="2" stroke="rgba(232,168,68,0.45)" stroke-width="1.5" fill="rgba(232,168,68,0.04)"/>
+                <!-- Door opening -->
+                <line x1="60" y1="88" x2="60" y2="128" stroke="#0e1930" stroke-width="4"/>
+                <path d="M60 88 Q80 88 80 108" stroke="rgba(232,168,68,0.35)" stroke-width="1" fill="none"/>
+                <!-- Bathtub shape -->
+                <rect x="70" y="28" width="70" height="40" rx="6" stroke="rgba(232,168,68,0.5)" stroke-width="1.5" fill="rgba(232,168,68,0.06)"/>
+                <rect x="76" y="34" width="58" height="28" rx="4" stroke="rgba(232,168,68,0.25)" stroke-width="1" fill="none"/>
+                <circle cx="100" cy="64" r="3" stroke="rgba(232,168,68,0.4)" stroke-width="1" fill="rgba(232,168,68,0.1)"/>
+                <!-- Toilet shape -->
+                <rect x="160" y="28" width="32" height="24" rx="3" stroke="rgba(232,168,68,0.45)" stroke-width="1.5" fill="rgba(232,168,68,0.05)"/>
+                <ellipse cx="176" cy="62" rx="18" ry="14" stroke="rgba(232,168,68,0.45)" stroke-width="1.5" fill="rgba(232,168,68,0.05)"/>
+                <!-- Vanity/sink -->
+                <rect x="70" y="90" width="50" height="30" rx="3" stroke="rgba(232,168,68,0.45)" stroke-width="1.5" fill="rgba(232,168,68,0.05)"/>
+                <ellipse cx="95" cy="105" rx="14" ry="10" stroke="rgba(232,168,68,0.3)" stroke-width="1" fill="rgba(232,168,68,0.03)"/>
+                <!-- Shower enclosure -->
+                <rect x="210" y="28" width="42" height="60" rx="2" stroke="rgba(232,168,68,0.45)" stroke-width="1.5" fill="rgba(232,168,68,0.04)"/>
+                <line x1="210" y1="28" x2="252" y2="88" stroke="rgba(232,168,68,0.12)" stroke-width="1"/>
+                <circle cx="220" cy="38" r="4" stroke="rgba(232,168,68,0.4)" stroke-width="1" fill="rgba(232,168,68,0.08)"/>
+                <!-- Floor tiles hint -->
+                <line x1="60"  y1="110" x2="260" y2="110" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+                <line x1="60"  y1="128" x2="260" y2="128" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+                <line x1="130" y1="100" x2="130" y2="128" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+                <line x1="195" y1="100" x2="195" y2="128" stroke="rgba(232,168,68,0.08)" stroke-width="1"/>
+              </svg>
+            </div>
             <div class="service-card__badge">Most popular</div>
             <div class="service-card__icon" aria-hidden="true">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -258,6 +323,41 @@
           </article>
 
           <article class="service-card">
+            <!-- Visual header: Hot Water Systems — cylinder + heat waves -->
+            <div class="service-card__visual" aria-hidden="true">
+              <svg viewBox="0 0 320 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="148" fill="#0B1120"/>
+                <!-- Background grid -->
+                <line x1="0" y1="37"  x2="320" y2="37"  stroke="rgba(232,168,68,0.04)" stroke-width="1"/>
+                <line x1="0" y1="74"  x2="320" y2="74"  stroke="rgba(232,168,68,0.04)" stroke-width="1"/>
+                <line x1="0" y1="111" x2="320" y2="111" stroke="rgba(232,168,68,0.04)" stroke-width="1"/>
+                <line x1="80"  y1="0" x2="80"  y2="148" stroke="rgba(232,168,68,0.04)" stroke-width="1"/>
+                <line x1="160" y1="0" x2="160" y2="148" stroke="rgba(232,168,68,0.04)" stroke-width="1"/>
+                <line x1="240" y1="0" x2="240" y2="148" stroke="rgba(232,168,68,0.04)" stroke-width="1"/>
+                <!-- Hot water cylinder body -->
+                <rect x="124" y="18" width="72" height="100" rx="8" fill="rgba(232,168,68,0.07)" stroke="rgba(232,168,68,0.4)" stroke-width="1.5"/>
+                <!-- Cylinder end caps -->
+                <ellipse cx="160" cy="18" rx="36" ry="8" fill="rgba(232,168,68,0.1)" stroke="rgba(232,168,68,0.4)" stroke-width="1.5"/>
+                <ellipse cx="160" cy="118" rx="36" ry="8" fill="rgba(232,168,68,0.07)" stroke="rgba(232,168,68,0.35)" stroke-width="1.5"/>
+                <!-- Temperature indicator band -->
+                <rect x="124" y="58" width="72" height="14" rx="0" fill="rgba(232,168,68,0.12)" stroke="none"/>
+                <!-- Pipe connections -->
+                <rect x="88"  y="30" width="36" height="8" rx="4" fill="rgba(232,168,68,0.08)" stroke="rgba(232,168,68,0.3)" stroke-width="1"/>
+                <rect x="196" y="30" width="36" height="8" rx="4" fill="rgba(232,168,68,0.08)" stroke="rgba(232,168,68,0.3)" stroke-width="1"/>
+                <rect x="88"  y="106" width="36" height="8" rx="4" fill="rgba(232,168,68,0.08)" stroke="rgba(232,168,68,0.3)" stroke-width="1"/>
+                <rect x="196" y="106" width="36" height="8" rx="4" fill="rgba(232,168,68,0.08)" stroke="rgba(232,168,68,0.3)" stroke-width="1"/>
+                <!-- Heat wave arcs (right side) -->
+                <path d="M216 54 Q230 65 216 76" stroke="rgba(232,168,68,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <path d="M224 50 Q242 65 224 80" stroke="rgba(232,168,68,0.35)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <path d="M232 46 Q254 65 232 84" stroke="rgba(232,168,68,0.2)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <!-- Cert badge -->
+                <circle cx="160" cy="65" r="14" fill="rgba(232,168,68,0.12)" stroke="rgba(232,168,68,0.45)" stroke-width="1.5"/>
+                <polyline points="153,65 158,70 168,58" stroke="rgba(232,168,68,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Label -->
+                <rect x="102" y="128" width="116" height="16" rx="3" fill="rgba(232,168,68,0.1)"/>
+                <text x="160" y="140" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" font-weight="600" fill="rgba(232,168,68,0.8)" letter-spacing="0.8">COMPLIANCE CERTIFIED</text>
+              </svg>
+            </div>
             <div class="service-card__icon" aria-hidden="true">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
@@ -352,18 +452,35 @@
     </section>
 
     <!-- ============================================================
-         SOCIAL PROOF / TESTIMONIALS
+         SOCIAL PROOF / TESTIMONIALS — WEB-38
+         Copy: COPY.md. Design: design.json.
+         Layout: Google Reviews badge + 2-col testimonial grid.
     ============================================================ -->
     <section id="social-proof" class="social-proof fade-in" aria-labelledby="social-proof-heading">
       <div class="container">
         <header class="section-header">
           <p class="section-eyebrow">What our clients say</p>
-          <h2 id="social-proof-heading" class="section-heading">Real words. Real Auckland homeowners.</h2>
+          <h2 id="social-proof-heading" class="section-heading">4.9 Stars Across Auckland</h2>
         </header>
+
+        <!-- Google Reviews trust stat -->
+        <div class="reviews-badge fade-in" aria-label="Google Reviews rating">
+          <div class="reviews-badge__stars" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="reviews-badge__body">
+            <span class="reviews-badge__score">4.9</span>
+            <span class="reviews-badge__label">Google Reviews</span>
+          </div>
+        </div>
 
         <div class="testimonials__grid">
 
-          <blockquote class="testimonial">
+          <blockquote class="testimonial fade-in testimonial--delay-1">
             <div class="testimonial__stars" aria-label="5 stars out of 5">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -372,7 +489,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
             <p class="testimonial__quote">
-              "We had a burst pipe at 7pm on a Friday. Auckland Precision were at our Remuera home by 8:30pm, had it fixed by 10pm, and the price matched the quote exactly. I've used three other plumbers over the years — none of them operate like this."
+              "We called at 7am with no hot water — they were here by 10am, fixed it same day, and the price was exactly what they quoted. First plumber we've had in years who actually did what they said."
             </p>
             <footer class="testimonial__footer">
               <cite class="testimonial__author">
@@ -382,7 +499,7 @@
             </footer>
           </blockquote>
 
-          <blockquote class="testimonial">
+          <blockquote class="testimonial fade-in testimonial--delay-2">
             <div class="testimonial__stars" aria-label="5 stars out of 5">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -391,11 +508,11 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
             <p class="testimonial__quote">
-              "We contracted Auckland Precision to manage our entire Ponsonby bathroom renovation. The project ran on schedule, the fixed quote held, and the quality of work is exceptional. The team communicated proactively throughout. Exactly the standard we expected."
+              "They renovated our main bathroom from scratch. The whole job was managed start to finish with no stress on our side. The workmanship is exceptional — you can see the difference."
             </p>
             <footer class="testimonial__footer">
               <cite class="testimonial__author">
-                <strong>James &amp; Olivia K.</strong>
+                <strong>James &amp; Claire T.</strong>
                 <span class="testimonial__location">Ponsonby, Auckland</span>
               </cite>
             </footer>
@@ -403,9 +520,9 @@
 
         </div>
 
-        <div class="social-proof__trust-signal">
+        <div class="social-proof__trust-signal fade-in testimonial--delay-3">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
           </svg>
           <p>Every review is from a verified Auckland Precision Plumbing client. No paid reviews, no incentivised feedback.</p>
         </div>
@@ -419,8 +536,9 @@
       <div class="container contact__inner">
         <div class="contact__header">
           <p class="section-eyebrow">Get in touch</p>
-          <h2 id="contact-heading" class="section-heading">Tell us what you need.<br>We'll get back to you within the hour.</h2>
-          <p class="contact__subhead">Fill out the form below or call us directly on <a href="tel:+6495550123" class="contact__phone-link" data-event="phone_click">(09) 555 0123</a>. We're available 7 days.</p>
+          <h2 id="contact-heading" class="section-heading">Same-Day Quote. Fixed Price. No Surprises.</h2>
+          <p class="contact__subhead">Tell us what you need. We'll confirm your same-day booking and give you a fixed price before any work begins.</p>
+          <p class="contact__phone-cta">Or call us directly — <a href="tel:+6495550123" class="contact__phone-link" data-event="phone_click">(09) 555 0123</a>. Available 7 days.</p>
         </div>
 
         <!-- Contact Form — Formspree endpoint: replace YOUR_FORM_ID -->
@@ -490,10 +608,11 @@
               <label for="contact-service" class="form-label">Service Required</label>
               <select id="contact-service" name="service" class="form-input form-select" aria-describedby="contact-service-hint">
                 <option value="">Select a service…</option>
-                <option value="Emergency Plumbing">Emergency Plumbing</option>
+                <option value="Emergency Callout">Emergency Callout</option>
                 <option value="Bathroom Renovation">Bathroom Renovation</option>
                 <option value="Hot Water System">Hot Water System</option>
-                <option value="General Plumbing">General Plumbing</option>
+                <option value="General Maintenance">General Maintenance</option>
+                <option value="Other">Other</option>
               </select>
               <span id="contact-service-hint" class="form-hint">Not sure? Leave blank and describe your situation below.</span>
             </div>
@@ -523,7 +642,7 @@
           </div>
 
           <button type="submit" class="btn btn--primary contact-form__submit" data-event="cta_click" data-label="form-submit">
-            <span class="btn__text">Send Enquiry</span>
+            <span class="btn__text">Get Your Free Quote</span>
             <span class="btn__loading" aria-hidden="true">Sending…</span>
           </button>
 
@@ -561,12 +680,22 @@
           <span class="logo__mark" aria-hidden="true">APP</span>
           <span class="logo__text">Auckland Precision Plumbing</span>
         </a>
-        <p class="footer__tagline">Precision. Guaranteed.</p>
+        <p class="footer__tagline">Precision Plumbing, Guaranteed.</p>
         <address class="footer__contact">
           <a href="tel:+6495550123" class="footer__phone" data-event="phone_click">(09) 555 0123</a><br>
           <a href="mailto:hello@aucklandprecisionplumbing.co.nz" class="footer__email">hello@aucklandprecisionplumbing.co.nz</a><br>
           Auckland, New Zealand
         </address>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="https://www.facebook.com/aucklandprecisionplumbing" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Auckland Precision Plumbing on Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <span class="sr-only">Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/aucklandprecisionplumbing" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Auckland Precision Plumbing on Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+        </div>
       </div>
 
       <nav class="footer__nav" aria-label="Footer navigation">
